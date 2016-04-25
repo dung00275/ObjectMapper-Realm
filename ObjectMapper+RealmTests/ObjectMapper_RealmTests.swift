@@ -7,12 +7,14 @@
 //
 
 import XCTest
+import ObjectMapper
 @testable import ObjectMapper_Realm
 
 class ObjectMapper_RealmTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     

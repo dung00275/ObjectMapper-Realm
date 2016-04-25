@@ -1,13 +1,118 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QsB-Xt-WNS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="zch-HH-GQA">
+            <objects>
+                <navigationController id="dMl-eF-aHi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="GJq-mU-ctC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e0C-TU-wdP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EOS-0B-aum"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C25-bZ-KrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-609" y="36"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="U0M-Y6-ark">
+            <objects>
+                <tabBarController id="QsB-Xt-WNS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3jN-Kc-in9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dMl-eF-aHi" kind="relationship" relationship="viewControllers" id="dH7-45-uPd"/>
+                        <segue destination="79w-Yt-qQZ" kind="relationship" relationship="viewControllers" id="DUv-ad-LYK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlL-A8-vl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-678" y="819"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cxn-fw-c3i">
+            <objects>
+                <navigationController storyboardIdentifier="navSearchDataBase" id="79w-Yt-qQZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="history" id="b5O-zB-WfC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oun-qp-Pvs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RW7-Vi-wVE" kind="relationship" relationship="rootViewController" id="S9s-lX-TDK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZe-Yi-bmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="915"/>
+        </scene>
+        <!--Search In DataBase-->
+        <scene sceneID="9at-ti-9F8">
+            <objects>
+                <viewController storyboardIdentifier="SearchDataBaseController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RW7-Vi-wVE" customClass="SearchDataBaseController" customModule="ObjectMapper_Realm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tdP-Gg-4vV"/>
+                        <viewControllerLayoutGuide type="bottom" id="NY3-xp-fJ2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qbe-Ii-pnL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dtW-0F-f7U">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BPm-47-CTO"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RW7-Vi-wVE" id="XBQ-J3-Jao"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ryx-3p-Bgh">
+                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RW7-Vi-wVE" id="IBH-4E-Pfd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ryx-3p-Bgh" firstAttribute="leading" secondItem="qbe-Ii-pnL" secondAttribute="leadingMargin" constant="-20" id="gEl-gl-rtW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dtW-0F-f7U" secondAttribute="trailing" constant="-20" id="mq7-4L-vR6"/>
+                            <constraint firstItem="dtW-0F-f7U" firstAttribute="top" secondItem="tdP-Gg-4vV" secondAttribute="bottom" id="os6-ew-Nz9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ryx-3p-Bgh" secondAttribute="trailing" constant="-20" id="rOT-Ar-Vht"/>
+                            <constraint firstItem="dtW-0F-f7U" firstAttribute="leading" secondItem="qbe-Ii-pnL" secondAttribute="leadingMargin" constant="-20" id="tgV-PF-GsN"/>
+                            <constraint firstItem="Ryx-3p-Bgh" firstAttribute="top" secondItem="dtW-0F-f7U" secondAttribute="bottom" id="tpQ-zg-JYq"/>
+                            <constraint firstItem="NY3-xp-fJ2" firstAttribute="top" secondItem="Ryx-3p-Bgh" secondAttribute="bottom" id="xhb-wK-5Dm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search In DataBase" id="ttj-LF-Wnl"/>
+                    <connections>
+                        <outlet property="searchBar" destination="dtW-0F-f7U" id="VcR-os-bKo"/>
+                        <outlet property="tableView" destination="Ryx-3p-Bgh" id="ERF-CQ-8d2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F2b-kk-8l3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="913"/>
+        </scene>
+        <!--Search Online + Save DB-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ObjectMapper_Realm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +120,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6oI-VP-x9h">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vQV-bQ-VWM"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ab6-bn-76C"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-3r-Zcs">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WBf-cy-0iM"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="EQ5-iT-GVW">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EQ5-iT-GVW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ivx-pt-0Fw"/>
+                            <constraint firstItem="yjL-3r-Zcs" firstAttribute="top" secondItem="6oI-VP-x9h" secondAttribute="bottom" id="Lt4-x9-hJo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6oI-VP-x9h" secondAttribute="trailing" constant="-20" id="Mer-O2-dUV"/>
+                            <constraint firstItem="yjL-3r-Zcs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Mfx-4P-jdD"/>
+                            <constraint firstItem="6oI-VP-x9h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TqV-BX-562"/>
+                            <constraint firstItem="6oI-VP-x9h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="U6Z-yL-NSt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yjL-3r-Zcs" secondAttribute="bottom" id="UcY-Xg-lRf"/>
+                            <constraint firstItem="EQ5-iT-GVW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ahj-8g-qut"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yjL-3r-Zcs" secondAttribute="trailing" constant="-20" id="zLY-rG-Kh0"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Search Online + Save DB" id="4qp-p3-vgi"/>
+                    <connections>
+                        <outlet property="indicator" destination="EQ5-iT-GVW" id="4dB-fT-iyf"/>
+                        <outlet property="searchBar" destination="6oI-VP-x9h" id="3BV-Qc-Y3k"/>
+                        <outlet property="tableView" destination="yjL-3r-Zcs" id="QM0-3S-ksN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="526" y="141"/>
         </scene>
     </scenes>
 </document>

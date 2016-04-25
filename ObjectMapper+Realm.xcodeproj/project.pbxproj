@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF86CAE71CCDF9A400766D35 /* SearchDataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86CAE61CCDF9A400766D35 /* SearchDataBaseController.swift */; };
 		CF9D49AE1CCDCB940071B138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9D49AD1CCDCB940071B138 /* AppDelegate.swift */; };
 		CF9D49B01CCDCB940071B138 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9D49AF1CCDCB940071B138 /* ViewController.swift */; };
 		CF9D49B31CCDCB940071B138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9D49B11CCDCB940071B138 /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		CF9D49B81CCDCB940071B138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9D49B61CCDCB940071B138 /* LaunchScreen.storyboard */; };
 		CF9D49C31CCDCB940071B138 /* ObjectMapper_RealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9D49C21CCDCB940071B138 /* ObjectMapper_RealmTests.swift */; };
 		CF9D49CE1CCDCB940071B138 /* ObjectMapper_RealmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9D49CD1CCDCB940071B138 /* ObjectMapper_RealmUITests.swift */; };
+		CF9D49DD1CCDDA610071B138 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9D49DC1CCDDA610071B138 /* Model.swift */; };
+		FAAB32BD5905E2A85056FB59 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAC315BDF2DBABA28BE1EB8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8BAC315BDF2DBABA28BE1EB8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF86CAE61CCDF9A400766D35 /* SearchDataBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDataBaseController.swift; sourceTree = "<group>"; };
+		CF86CAF51CCE188D00766D35 /* ObjectMapper+Realm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper+Realm-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF9D49AA1CCDCB940071B138 /* ObjectMapper+Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjectMapper+Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9D49AD1CCDCB940071B138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF9D49AF1CCDCB940071B138 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,9 @@
 		CF9D49C91CCDCB940071B138 /* ObjectMapper+RealmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ObjectMapper+RealmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9D49CD1CCDCB940071B138 /* ObjectMapper_RealmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper_RealmUITests.swift; sourceTree = "<group>"; };
 		CF9D49CF1CCDCB940071B138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF9D49DC1CCDDA610071B138 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DDB1ADAE3EC06786DB267AC6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E72B8FBAABC3A9B2F88DD090 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAB32BD5905E2A85056FB59 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F67CE36CFDD97FE7D6DDD61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDB1ADAE3EC06786DB267AC6 /* Pods.debug.xcconfig */,
+				E72B8FBAABC3A9B2F88DD090 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF9D49A11CCDCB940071B138 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,8 @@
 				CF9D49C11CCDCB940071B138 /* ObjectMapper+RealmTests */,
 				CF9D49CC1CCDCB940071B138 /* ObjectMapper+RealmUITests */,
 				CF9D49AB1CCDCB940071B138 /* Products */,
+				7F67CE36CFDD97FE7D6DDD61 /* Pods */,
+				F335320482EE94CD3668ADD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +124,9 @@
 				CF9D49B41CCDCB940071B138 /* Assets.xcassets */,
 				CF9D49B61CCDCB940071B138 /* LaunchScreen.storyboard */,
 				CF9D49B91CCDCB940071B138 /* Info.plist */,
+				CF9D49DC1CCDDA610071B138 /* Model.swift */,
+				CF86CAE61CCDF9A400766D35 /* SearchDataBaseController.swift */,
+				CF86CAF51CCE188D00766D35 /* ObjectMapper+Realm-Bridging-Header.h */,
 			);
 			path = "ObjectMapper+Realm";
 			sourceTree = "<group>";
@@ -125,6 +149,14 @@
 			path = "ObjectMapper+RealmUITests";
 			sourceTree = "<group>";
 		};
+		F335320482EE94CD3668ADD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BAC315BDF2DBABA28BE1EB8 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF9D49D21CCDCB940071B138 /* Build configuration list for PBXNativeTarget "ObjectMapper+Realm" */;
 			buildPhases = (
+				42BEF7B2CCDEA5B261D054CA /* Check Pods Manifest.lock */,
 				CF9D49A61CCDCB940071B138 /* Sources */,
 				CF9D49A71CCDCB940071B138 /* Frameworks */,
 				CF9D49A81CCDCB940071B138 /* Resources */,
+				95E23AEA6F562356FBCD9DDF /* Embed Pods Frameworks */,
+				7C877C20BD7A5617B6953D0F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,11 +286,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42BEF7B2CCDEA5B261D054CA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C877C20BD7A5617B6953D0F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95E23AEA6F562356FBCD9DDF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF9D49A61CCDCB940071B138 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF86CAE71CCDF9A400766D35 /* SearchDataBaseController.swift in Sources */,
+				CF9D49DD1CCDDA610071B138 /* Model.swift in Sources */,
 				CF9D49B01CCDCB940071B138 /* ViewController.swift in Sources */,
 				CF9D49AE1CCDCB940071B138 /* AppDelegate.swift in Sources */,
 			);
@@ -397,23 +482,30 @@
 		};
 		CF9D49D31CCDCB940071B138 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDB1ADAE3EC06786DB267AC6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "ObjectMapper+Realm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dungvu.ObjectMapper-Realm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectMapper+Realm/ObjectMapper+Realm-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CF9D49D41CCDCB940071B138 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E72B8FBAABC3A9B2F88DD090 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "ObjectMapper+Realm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dungvu.ObjectMapper-Realm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectMapper+Realm/ObjectMapper+Realm-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -482,6 +574,7 @@
 				CF9D49D41CCDCB940071B138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF9D49D51CCDCB940071B138 /* Build configuration list for PBXNativeTarget "ObjectMapper+RealmTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +583,7 @@
 				CF9D49D71CCDCB940071B138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF9D49D81CCDCB940071B138 /* Build configuration list for PBXNativeTarget "ObjectMapper+RealmUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +592,7 @@
 				CF9D49DA1CCDCB940071B138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
